@@ -104,7 +104,7 @@ export default function Slider({ title }: SliderProps) {
       </div>
 
       <div className="relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1022px] mx-auto">
           <h2 className="text-[#4A2C2C] text-3xl font-cooper-bold text-center mb-12">
             {title}
           </h2>

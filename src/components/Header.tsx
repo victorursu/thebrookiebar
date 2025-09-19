@@ -13,7 +13,12 @@ export default function Header() {
   // Close mobile menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      const button = document.querySelector('[aria-label="Toggle mobile menu"]');
+      
+      if (mobileMenuRef.current && 
+          !mobileMenuRef.current.contains(target) && 
+          !button?.contains(target)) {
         setIsMobileMenuOpen(false);
       }
     }
@@ -99,8 +104,12 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:text-[#D4A76A] transition-colors duration-200 p-2"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+              }}
+              className="text-white hover:text-[#D4A76A] transition-colors duration-200 p-2 z-50 relative"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? (
