@@ -35,29 +35,33 @@ export default function Header() {
   return (
     <header className="bg-[#4A2C2C] w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/logo.png"
-              alt="The Brookie Bar Logo"
-              width={120}
-              height={60}
-              className="h-12 w-auto"
-              priority
-            />
-          </Link>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Left Navigation - Pre Order */}
+          <nav className="hidden md:flex">
             <Link 
               href="/pre-order" 
-              className={`text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium ${
+              className={`text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium text-lg ${
                 pathname === '/pre-order' ? 'text-[#D4A76A]' : ''
               }`}
             >
               Pre Order
             </Link>
+          </nav>
+
+          {/* Center Logo */}
+          <Link href="/" className="flex-shrink-0 absolute left-1/2 transform -translate-x-1/2">
+            <Image
+              src="/logo.png"
+              alt="The Brookie Bar Logo"
+              width={180}
+              height={90}
+              className="h-16 w-auto"
+              priority
+            />
+          </Link>
+
+          {/* Right Navigation */}
+          <nav className="hidden md:flex space-x-8">
             <Link 
               href="/flavours" 
               className={`text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium ${
@@ -106,11 +110,11 @@ export default function Header() {
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
-          <div ref={mobileMenuRef} className="md:hidden absolute top-16 left-0 right-0 z-50 bg-[#4A2C2C] border-t border-[#3A1F1F] shadow-lg">
+          <div ref={mobileMenuRef} className="md:hidden absolute top-20 left-0 right-0 z-50 bg-[#4A2C2C] border-t border-[#3A1F1F] shadow-lg">
             <div className="px-4 py-4 space-y-2">
               <Link 
                 href="/pre-order" 
-                className={`block px-3 py-3 text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium rounded-lg hover:bg-[#3A1F1F] ${
+                className={`block px-3 py-3 text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium rounded-lg hover:bg-[#3A1F1F] text-lg ${
                   pathname === '/pre-order' ? 'text-[#D4A76A] bg-[#3A1F1F]' : ''
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
