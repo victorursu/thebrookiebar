@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Classic Chocolate Chip",
+    "sku": "CC001",
+    "price": "$4.75",
+    "image": "/products/classic-chocolate-chip.jpg",
+    "diagram": "/products/classic-chocolate-chip-diagram.jpg",
+    "description1": "Our signature brookie bar with rich chocolate chips",
+    "description2": "Perfect chewy texture that melts in your mouth",
+    "description3": "Made with premium Belgian chocolate",
+    "description4": "Handcrafted with love in small batches"
+  },
+  {
+    "title": "Kinder Bueno",
+    "sku": "KB002",
+    "price": "$5.75",
+    "image": "/products/kinder-bueno.jpg",
+    "diagram": "/products/kinder-bueno-diagram.jpg",
+    "description1": "Delicious blend of hazelnut cream and chocolate",
+    "description2": "Inspired by the classic Kinder Bueno taste",
+    "description3": "Crispy wafer layers with smooth filling",
+    "description4": "A European favorite reimagined"
+  },
+  {
+    "title": "Funfetti",
+    "sku": "FF003",
+    "price": "$4.75",
+    "image": "/products/funfetti.jpg",
+    "diagram": "/products/funfetti-diagram.jpg",
+    "description1": "Celebrate with our colorful funfetti brookie bar",
+    "description2": "Packed with rainbow sprinkles and vanilla goodness",
+    "description3": "Perfect for birthdays and special occasions",
+    "description4": "Brings joy to every bite"
+  },
+  {
+    "title": "Oreo Crumble",
+    "sku": "OC004",
+    "price": "$5.75",
+    "image": "/products/oreo-crumble.jpg",
+    "diagram": "/products/oreo-crumble-diagram.jpg",
+    "description1": "Rich chocolate brookie with generous Oreo chunks",
+    "description2": "Creamy filling with cookie crumble texture",
+    "description3": "Double the chocolate, double the deliciousness",
+    "description4": "A cookie lover's dream come true"
+  },
+  {
+    "title": "Salted Caramel",
+    "sku": "SC005",
+    "price": "$5.75",
+    "image": "/products/salted-caramel.jpg",
+    "diagram": "/products/salted-caramel-diagram.jpg",
+    "description1": "Sweet and salty perfection with gooey caramel swirls",
+    "description2": "Hint of sea salt enhances the rich flavors",
+    "description3": "Smooth caramel meets chewy brookie base",
+    "description4": "An indulgent treat for sophisticated palates"
+  },
+  {
+    "title": "Peanut Butter Bliss",
+    "sku": "PB006",
+    "price": "$4.75",
+    "image": "/products/peanut-butter-bliss.jpg",
+    "diagram": "/products/peanut-butter-bliss-diagram.jpg",
+    "description1": "For peanut butter lovers everywhere",
+    "description2": "Rich brookie base with creamy peanut butter swirls",
+    "description3": "Smooth and nutty with perfect texture balance",
+    "description4": "A protein-packed treat that satisfies"
+  }
+]

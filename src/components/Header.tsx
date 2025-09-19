@@ -68,16 +68,16 @@ export default function Header() {
             />
           </Link>
 
-          {/* Right Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link 
-              href="/flavours" 
-              className={`text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium ${
-                pathname === '/flavours' ? 'text-[#D4A76A]' : ''
-              }`}
-            >
-              Flavors
-            </Link>
+              {/* Right Navigation */}
+              <nav className="hidden md:flex space-x-8">
+                <Link 
+                  href="/flavors" 
+                  className={`text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium ${
+                    pathname === '/flavors' ? 'text-[#D4A76A]' : ''
+                  }`}
+                >
+                  Flavors
+                </Link>
             <Link 
               href="/about" 
               className={`text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium ${
@@ -129,15 +129,15 @@ export default function Header() {
               >
                 Pre Order
               </Link>
-              <Link 
-                href="/flavours" 
-                className={`block px-3 py-3 text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium rounded-lg hover:bg-[#3A1F1F] ${
-                  pathname === '/flavours' ? 'text-[#D4A76A] bg-[#3A1F1F]' : ''
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Flavors
-              </Link>
+                  <Link 
+                    href="/flavors" 
+                    className={`block px-3 py-3 text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium rounded-lg hover:bg-[#3A1F1F] ${
+                      pathname === '/flavors' ? 'text-[#D4A76A] bg-[#3A1F1F]' : ''
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Flavors
+                  </Link>
               <Link 
                 href="/about" 
                 className={`block px-3 py-3 text-white hover:text-[#D4A76A] transition-colors duration-200 font-cooper-medium rounded-lg hover:bg-[#3A1F1F] ${
