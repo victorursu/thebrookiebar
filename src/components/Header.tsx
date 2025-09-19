@@ -55,7 +55,7 @@ export default function Header() {
               alt="The Brookie Bar Logo"
               width={540}
               height={270}
-              className="h-48 w-auto hidden md:block"
+              className="h-48 w-auto hidden md:block mt-5"
               priority
             />
             <Image
