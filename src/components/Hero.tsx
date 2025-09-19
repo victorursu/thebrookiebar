@@ -10,9 +10,9 @@ export default function Hero() {
           }}
         >
           {/* Content */}
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-end justify-center pb-8">
             <div className="text-center">
-              <h1 className="text-2xl md:text-4xl font-cooper-bold mb-2" style={{ color: '#e798a5' }}>
+              <h1 className="text-3xl md:text-5xl font-cooper-bold mb-2" style={{ color: '#2c0900' }}>
                 Welcome to
               </h1>
               <h2 className="text-3xl md:text-6xl font-cooper-bold">
