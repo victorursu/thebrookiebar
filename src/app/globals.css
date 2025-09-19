@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-inter);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-playfair), serif;
+}
+
+/* Cooper-like font classes */
+.font-cooper {
+  font-family: var(--font-playfair), serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.font-cooper-bold {
+  font-family: var(--font-playfair), serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.font-cooper-medium {
+  font-family: var(--font-playfair), serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
+
+/* Override all text elements to use Cooper font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 800;
+}
+
+p, span, div, a, button, input, textarea, select, label {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Navigation specific styling */
+nav a {
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;
+}
+
+/* Button styling */
+button {
+  font-family: var(--font-playfair), serif;
+  font-weight: 600;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A2C2C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A1F1F;
+}
