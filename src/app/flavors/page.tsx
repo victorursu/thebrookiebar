@@ -60,8 +60,20 @@ export default function Flavors() {
           {products.map((product) => (
             <div key={product.sku} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               {/* Product Image */}
-              <div className="relative h-64 bg-[#8B4513] flex items-center justify-center">
-                <span className="text-white text-6xl">🍪</span>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <div className="absolute inset-0 bg-[#8B4513] flex items-center justify-center hidden">
+                  <span className="text-white text-6xl">🍪</span>
+                </div>
               </div>
               
               {/* Product Info */}

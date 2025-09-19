@@ -136,8 +136,20 @@ export default function Slider({ title }: SliderProps) {
                     key={product.sku} 
                     className="bg-white rounded-lg shadow-md p-4 w-48 text-center flex-shrink-0"
                   >
-                    <div className="w-32 h-32 bg-[#8B4513] rounded-lg mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-white text-4xl">🍪</span>
+                    <div className="w-32 h-32 rounded-lg mx-auto mb-4 overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.title}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          target.nextElementSibling?.classList.remove('hidden');
+                        }}
+                      />
+                      <div className="w-full h-full bg-[#8B4513] flex items-center justify-center hidden">
+                        <span className="text-white text-4xl">🍪</span>
+                      </div>
                     </div>
                     <h3 className="text-[#4A2C2C] font-bold text-lg mb-2">{product.title}</h3>
                     <p className="text-[#4A2C2C] text-sm mb-2">{product.description1}</p>
