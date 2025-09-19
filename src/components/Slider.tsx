@@ -36,20 +36,16 @@ export default function Slider({ title }: SliderProps) {
   }, []);
 
   const nextSlide = () => {
-    if (isTransitioning) return;
+    if (isTransitioning || currentIndex >= products.length - 4) return;
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => 
-      prevIndex === products.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => prevIndex + 1);
     setTimeout(() => setIsTransitioning(false), 300);
   };
 
   const prevSlide = () => {
-    if (isTransitioning) return;
+    if (isTransitioning || currentIndex <= 0) return;
     setIsTransitioning(true);
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? products.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => prevIndex - 1);
     setTimeout(() => setIsTransitioning(false), 300);
   };
 
@@ -69,9 +65,9 @@ export default function Slider({ title }: SliderProps) {
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
 
-    if (isLeftSwipe) {
+    if (isLeftSwipe && currentIndex < products.length - 4) {
       nextSlide();
-    } else if (isRightSwipe) {
+    } else if (isRightSwipe && currentIndex > 0) {
       prevSlide();
     }
   };
@@ -112,7 +108,7 @@ export default function Slider({ title }: SliderProps) {
           <div className="flex items-center justify-center">
             <button 
               onClick={prevSlide}
-              disabled={isTransitioning}
+              disabled={isTransitioning || currentIndex <= 0}
               className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
@@ -163,7 +159,7 @@ export default function Slider({ title }: SliderProps) {
             
             <button 
               onClick={nextSlide}
-              disabled={isTransitioning}
+              disabled={isTransitioning || currentIndex >= products.length - 4}
               className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronRight className="w-6 h-6 text-gray-600" />
