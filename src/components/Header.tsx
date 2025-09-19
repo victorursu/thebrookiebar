@@ -53,9 +53,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="The Brookie Bar Logo"
-              width={900}
-              height={450}
-              className="h-80 w-auto hidden md:block"
+              width={540}
+              height={270}
+              className="h-48 w-auto hidden md:block"
               priority
             />
             <Image
