@@ -33,7 +33,7 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="bg-[#4A2C2C] w-full">
+    <header className="bg-[#4A2C2C] w-full sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Left Navigation - Pre Order */}
@@ -53,9 +53,17 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="The Brookie Bar Logo"
+              width={900}
+              height={450}
+              className="h-80 w-auto hidden md:block"
+              priority
+            />
+            <Image
+              src="/logo.png"
+              alt="The Brookie Bar Logo"
               width={180}
               height={90}
-              className="h-16 w-auto"
+              className="h-16 w-auto md:hidden"
               priority
             />
           </Link>

@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${playfairDisplay.variable} ${inter.variable} antialiased`}
       >
         <Header />
-        <main>{children}</main>
+        <main className="pt-40 md:pt-40">{children}</main>
         <Footer />
       </body>
     </html>

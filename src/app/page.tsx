@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
@@ -28,16 +27,6 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-[#4A2C2C] text-lg mb-4">Welcome to</h1>
-              <div className="mb-6 flex justify-center">
-                <Image
-                  src="/logo.png"
-                  alt="The Brookie Bar Logo"
-                  width={300}
-                  height={150}
-                  className="h-24 md:h-32 w-auto"
-                  priority
-                />
-              </div>
               <p className="text-[#4A2C2C] text-lg mb-8 max-w-2xl mx-auto">
                 Treat yourself to our delicious, handcrafted brookie bars!
               </p>
