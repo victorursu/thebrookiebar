@@ -5,14 +5,16 @@ export default function PreOrder() {
   return (
     <section className="bg-[#F8E8D7] py-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-[1022px] mx-auto">
-        <div className="flex flex-col items-center text-center">
-          <h2 className="text-[#4A2C2C] text-3xl font-cooper-bold mb-4">Pre-Order</h2>
-          <p className="text-[#4A2C2C] text-lg mb-6 max-w-2xl">
-            Interested in placing a bulk order? We&apos;ve got you covered!
-          </p>
+        <div className="flex flex-col">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 mb-6">
+            <h2 className="text-[#4A2C2C] text-3xl font-cooper-bold mb-2 lg:mb-0">Pre-Order</h2>
+            <p className="text-[#4A2C2C] text-lg">
+              Interested in placing a bulk order? We&apos;ve got you covered!
+            </p>
+          </div>
           <Link
             href="/pre-order"
-            className="bg-[#E89292] text-white px-8 py-3 rounded-lg font-cooper-medium hover:bg-[#D4A76A] transition-colors duration-200"
+            className="bg-[#E89292] text-white px-8 py-3 rounded-lg font-cooper-medium hover:bg-[#D4A76A] transition-colors duration-200 inline-block w-fit"
           >
             Place Your Order
           </Link>
